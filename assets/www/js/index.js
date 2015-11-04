@@ -49,9 +49,27 @@ var app = {
 };
 
 function transale(){
+    var english =["How are you?","How can i reach Zomba?","How can i contact the police?","Thank you very much!","On emergency push this glass","Enter your pin code","Enter your pin code here" ];
+    var chichewa=["Muli bwanji?","Kodi ndingafike bwanji ku Zomba?","Ndingawafikire bwanji apolisi?","Zikomo kwambiri!","Pa ngozi kankhani galasi iyi","Lowesani nambala yanu ya chinsinsi","Lowesani nambala yanu ya chinsisi apa"];
     var translation = $("#source").val();
-   $("#target").html(translation);
+    var state = 0;
+    var i = 0;
+    var output;
+
+
+    for (var i = 0; i < english.length; i++) {
+        if(english[i] == translation){
+            translation =chichewa[i];
+        }
+        else{
+
+        }
+    };
+    $("#target").html(translation);
 }
 function clearText(){
     $("#source").val("")
+}
+function suggest(){
+    alert("Your suggestion has been uploaded to the server to be reviewed");
 }
